@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- JS -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script type="text/javascript" src="../src/angular-inliner.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+    <base href="/angular-inliner/example/" />
+
+    <style>
+        .main-container {
+            background-color: turquoise;
+        }
+
+        table {
+            color: #ffffff;
+        }
+    </style>
+
+    <title>ngInliner</title>
+</head>
+<body ng-app="ExampleApp" ng-controller="MainCtrl">
+    <div class="main-container" ng-inline whitelist="['height', 'width']">
+        <table>
+            <tr>
+                <td ng-repeat="value in values">{{value}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
