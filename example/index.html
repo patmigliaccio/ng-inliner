@@ -2,8 +2,8 @@
 <html>
 <head>
     <!-- JS -->
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-    <script type="text/javascript" src="../src/angular-inliner.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type="text/javascript" src="../src/css-inliner.js"></script>
     <script type="text/javascript" src="app.js"></script>
 
     <base href="/angular-inliner/example/" />
@@ -18,11 +18,12 @@
         }
     </style>
 
-    <title>ngInliner</title>
+    <title>cssInliner</title>
 </head>
 <body ng-app="ExampleApp" ng-controller="MainCtrl">
-    <div class="main-container" ng-inline whitelist="['height', 'width']">
-        <table>
+    <div class="main-container">
+        <css-inline element-id="mytable" whitelist="['background-color', 'color']"></css-inline>
+        <table id="mytable">
             <tr>
                 <td ng-repeat="value in values">{{value}}</td>
             </tr>

@@ -8,7 +8,7 @@ An AngularJS directive that inlines an element and its children's css styles.
 
 ## Installing
 
-1. Include `angular-inliner.js` in your main file (`index.html`).
+1. Include `css-inliner.js` in your main file (`index.html`).
 2. Set `ngInliner` as a dependency in your app.
 
 ```
